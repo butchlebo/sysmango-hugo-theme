@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="space-y-8">
+    <header>
+        <h1 class="text-3xl font-bold text-sysmango-brown">{{ .Title }}</h1>
+        {{ with .Description }}
+        <div class="mt-2 text-lg text-gray-600">{{ . }}</div>
+        {{ end }}
+    </header>
+
+    <div class="space-y-8">
+        {{ range .Pages }}
+        <article class="card">
+            <h2 class="text-xl font-bold mb-2">
+                <a href="{{ .Permalink }}" class="text-sysmango-text hover:text-sysmango-blue">{{ .Title }}</a>
+            </h2>
+            <div class="text-sm text-gray-500 mb-3">{{ .Date.Format "January 2, 2006" }}</div>
+            <div class="prose max-w-none">
+                {{ .Summary }}
+            </div>
+            {{ if .Truncated }}
+            <div class="mt-4">
+                <a href="{{ .Permalink }}" class="text-sysmango-blue hover:underline">Read more →</a>
+            </div>
+            {{ end }}
+        </article>
+        {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

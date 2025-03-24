@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="space-y-10">
+    <!-- What am I doing? Section -->
+    <section class="card">
+        <h2 class="text-2xl font-bold mb-4 text-sysmango-brown">What am I doing?</h2>
+        <div class="space-y-4">
+            {{ range first 3 (where .Site.RegularPages "Type" "microblog") }}
+            <div class="border-b border-sysmango-gray pb-4 last:border-0 last:pb-0">
+                <div class="text-sm text-gray-500 mb-1">{{ .Date.Format "January 2, 2006" }}</div>
+                <div>{{ .Content }}</div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="mt-4">
+            <a href="/microblog/" class="text-sm text-sysmango-blue hover:underline">View all updates →</a>
+        </div>
+    </section>
+
+    <!-- The gears in my mind Section -->
+    <section>
+        <h2 class="text-2xl font-bold mb-6 text-sysmango-brown">The gears in my mind</h2>
+        <div class="space-y-8">
+            {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+            <article class="card">
+                <h3 class="text-xl font-bold mb-2">
+                    <a href="{{ .Permalink }}" class="text-sysmango-text hover:text-sysmango-blue">{{ .Title }}</a>
+                </h3>
+                <div class="text-sm text-gray-500 mb-3">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="prose max-w-none">
+                    {{ .Summary }}
+                </div>
+                {{ if .Truncated }}
+                <div class="mt-4">
+                    <a href="{{ .Permalink }}" class="text-sysmango-blue hover:underline">Read more →</a>
+                </div>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
+        <div class="mt-6">
+            <a href="/post/" class="btn">View all posts</a>
+        </div>
+    </section>
+</div>
+{{ end }}

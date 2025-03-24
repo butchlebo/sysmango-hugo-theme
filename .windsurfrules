@@ -1,0 +1,152 @@
+# Coding Guidelines
+1. The project is a custom hugo theme for my personal blog.
+2. The software running the website is hugo, this theme will be added to the hugo themes directory.
+3. The theme is named "sysmango"
+4. The theme should use Tailwind CSS for styling.
+5. Follow a component-based structure with reusable partials.
+6. Use modern JavaScript for interactive elements.
+7. Optimize for performance with minimal JS dependencies.
+8. The theme should be responsive and work well on all device sizes.
+
+# Design Guidelines
+1. The target is the image sysmango-design.png shown in the mockups.
+2. Images should come from Flickr integration.
+3. The image under "Narcissistic Vanity" should be the latest image in a specific Flickr album, https://www.flickr.com/photos/10271567@N05/albums/72157602336330353
+4. The design should be responsive and modern while maintaining the original aesthetic.
+5. Color scheme should use:
+   - Brown header background (#8B7355)
+   - Cream/beige page background (#F5F5DC)
+   - Light gray accents (#D5D5D5)
+   - Dark text (#333333)
+   - Blue links/accents (#4682B4)
+6. Maintain the diamond pattern in the header with gear graphics.
+7. Maintain the distinctive "Narcissistic Vanity" sidebar element.
+8. Social media integration with Twitter, LinkedIn, Facebook and Flickr.
+
+# Page Structure
+1. Homepage:
+   - Header with SysMango.com logo and gear graphics
+   - Navigation menu with HOME, ABOUT, DISCLAIMER, PHOTOS links
+   - "What am I doing?" microblog section with recent short posts
+   - "The gears in my mind" main blog section with excerpts
+   - Sidebar with Narcissistic Vanity section, navigation, and contact form
+
+2. About:
+   - Standard header and navigation
+   - Larger author photo
+   - Sections for professional background, blog purpose, and contact info
+   - Consistent sidebar
+
+3. Disclaimer:
+   - Legal text with sections for website content, copyright, privacy policy
+   - External links disclaimer
+   - Last updated timestamp
+   - Consistent sidebar
+
+4. Photos:
+   - Gallery layout with photos from Flickr integration
+   - Album category filtering system
+   - Grid layout with pagination
+   - Consistent sidebar
+
+5. Regular Posts:
+   - Standard blog post layout with full content
+   - Post metadata (date, categories, tags)
+   - Author information
+   - Comments section
+   - Related posts
+   - Consistent sidebar
+
+6. Special Posts:
+   - Enhanced layout for featured content
+   - Full-width layout without sidebar
+   - Support for featured image header
+   - Call-to-action buttons
+   - Social sharing section
+
+# Content Types
+1. Regular blog posts (main content)
+2. Microblog entries (short status updates)
+3. Featured/special posts (enhanced layout)
+4. Photo galleries (integrated with Flickr)
+
+# Technical Implementation
+1. Use Hugo's templating system with Tailwind CSS.
+2. Implement Flickr API integration for photo content.
+3. Create custom shortcodes for special content elements.
+4. Use partial templates for reusable components.
+5. Implement responsive design with mobile-first approach.
+6. Optimize images and assets for performance.
+7. Implement social sharing functionality.
+8. Create a contact form with serverless function support.
+
+# Directory Structure
+themes/sysmango/
+├── archetypes/
+│   ├── default.md
+│   ├── post.md
+│   ├── microblog.md
+│   └── special-post.md
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   ├── single.html
+│   │   └── special-post.html
+│   ├── partials/
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   ├── navigation.html
+│   │   ├── sidebar.html
+│   │   ├── post-summary.html
+│   │   └── comments.html
+│   ├── shortcodes/
+│   │   ├── flickr-gallery.html
+│   │   └── featured-image.html
+│   ├── index.html
+│   ├── about/
+│   │   └── single.html
+│   ├── disclaimer/
+│   │   └── single.html
+│   └── photos/
+│       └── list.html
+├── static/
+│   ├── images/
+│   │   ├── diamond-bg.png
+│   │   ├── gear-pattern.png
+│   │   └── logo.png
+│   ├── js/
+│   │   └── flickr-integration.js
+│   └── favicon.ico
+├── tailwind.config.js
+└── theme.toml
+
+# Configuration
+1. Use config.toml with appropriate site parameters:
+   - Site title, description, author
+   - Social media links
+   - Flickr API credentials
+   - Contact form settings
+   - Navigation menu items
+   - Taxonomy settings (categories, tags)
+   - Privacy settings for GDPR compliance
+
+# Build Process
+1. Install Hugo and Node.js dependencies
+2. Configure Tailwind CSS with PostCSS
+3. Use Hugo's asset pipeline for CSS/JS processing
+4. Enable syntax highlighting for code blocks
+5. Implement proper image optimization
+
+# Deployment
+1. Build the site with Hugo
+2. Deploy to preferred hosting platform
+3. Set up proper caching headers
+4. Configure custom domain if needed
+5. Implement SSL certificate
+

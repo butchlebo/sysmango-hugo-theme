@@ -1,0 +1,36 @@
+<footer class="bg-sysmango-brown text-white mt-auto">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-xl font-bold mb-4">SysMango</h3>
+                <p class="text-sm opacity-80">A personal blog about technology, photography, and random thoughts.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">Site</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-sysmango-gray transition">Home</a></li>
+                        <li><a href="/about/" class="hover:text-sysmango-gray transition">About</a></li>
+                        <li><a href="/disclaimer/" class="hover:text-sysmango-gray transition">Disclaimer</a></li>
+                        <li><a href="/photos/" class="hover:text-sysmango-gray transition">Photos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-sysmango-gray transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-sysmango-gray transition">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-sysmango-gray transition">Facebook</a></li>
+                        <li><a href="#" class="hover:text-sysmango-gray transition">Flickr</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-sm opacity-70">
+            <p>&copy; {{ now.Format "2006" }} SysMango. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

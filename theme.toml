@@ -1,0 +1,12 @@
+name = "SysMango"
+license = "MIT"
+licenselink = "https://github.com/yourusername/sysmango-hugo-theme/blob/master/LICENSE"
+description = "A custom Hugo theme featuring a distinctive diamond pattern header with gear graphics and Flickr integration"
+homepage = "https://github.com/yourusername/sysmango-hugo-theme"
+tags = ["blog", "responsive", "personal", "tailwind", "flickr"]
+features = ["blog", "responsive", "tailwind", "flickr integration", "social media"]
+min_version = "0.80.0"
+
+[author]
+  name = "SysMango"
+  homepage = "https://sysmango.com"
