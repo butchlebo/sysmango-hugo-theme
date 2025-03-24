@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="/css/style.css">
-    {{ with .Site.Params.flickrApiKey }}
+    <!-- Flickr API key configuration -->
     <script>
-        window.FLICKR_API_KEY = '{{ . }}';
+        // Set Flickr API key - for development only, use your own key in production
+        window.FLICKR_API_KEY = "2a2ce06c15780ebeb0b706650fc890b2";
+        {{ if .Site.Params.flickrApiKey }}
+            // Use the configured API key if available
+            window.FLICKR_API_KEY = "{{ .Site.Params.flickrApiKey }}";
+        {{ else }}
+            console.warn("Using development fallback Flickr API key. For production, configure flickrApiKey in your Hugo config.");
+        {{ end }}
     </script>
-    {{ end }}
 </head>
-<body class="bg-sysmango-cream text-sysmango-text">
+<body class="bg-white text-sysmango-text">
     <div class="min-h-screen flex flex-col">
         {{ partial "header.html" . }}
         

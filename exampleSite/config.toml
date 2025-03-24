@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "SysMango"
+theme = "sysmango"
+
+[params]
+  # IMPORTANT: Add your Flickr API key here
+  # The Narcissistic Vanity section requires a valid Flickr API key to display images
+  # You can obtain a Flickr API key at: https://www.flickr.com/services/apps/create/
+  flickrApiKey = "" # Replace with your actual Flickr API key

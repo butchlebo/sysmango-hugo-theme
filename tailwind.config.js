@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sysmango-brown': '#8B7355',
+        'sysmango-brown': '#605338',
         'sysmango-cream': '#F5F5DC',
         'sysmango-gray': '#D5D5D5',
         'sysmango-text': '#333333',

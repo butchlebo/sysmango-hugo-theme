@@ -2,10 +2,37 @@
     <!-- Narcissistic Vanity section -->
     <section class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4 text-sysmango-brown">Narcissistic Vanity</h2>
-        <div id="flickr-latest" class="relative aspect-square bg-sysmango-gray rounded overflow-hidden">
-            <img src="/images/placeholder.jpg" alt="Latest from Flickr" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                <a href="#" class="text-white text-sm" id="flickr-latest-link">View on Flickr</a>
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-row gap-6">
+                <div id="flickr-latest" class="relative rounded overflow-hidden p-4 flex-shrink-0" style="width: auto; padding-right: 5px;">
+                    <!-- Using a reliable Flickr image URL -->
+                    <img src="/images/placeholder.jpg" alt="Photo of Butch Lebo" class="w-[300px] h-[300px] object-cover mx-auto block border border-gray-200 rounded shadow-sm">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                        <a href="https://www.flickr.com/photos/10271567@N05/albums/72157602336330353" class="text-white text-sm font-medium" id="flickr-latest-link">View on Flickr</a>
+                    </div>
+                </div>
+                <div class="text-sm flex-grow">
+                    <p class="font-medium">SysMango.com is the personal website of Butch Lebo.</p>
+                    <p class="text-gray-700 text-xs mt-1">The picture to the left here is a picture of me, taken almost daily, for my own amusement and as decoration of this exercise in being uninteresting.</p>
+                </div>
+            </div>
+            <div class="text-sm">
+                <p>Please feel free to contact me via <a href="/contact/" class="text-sysmango-blue font-medium hover:underline">this form</a>, or by commenting on any of the posts.</p>
+                <p class="text-xs mt-1 text-gray-600">This text is really a placeholder while I think of something better. Because I'm not really sure what I want to put here. Do you have a suggestion?</p>
+            </div>
+            <div class="flex space-x-2 mt-2">
+                <a href="#" class="text-sysmango-blue hover:opacity-80">
+                    <img src="/images/twitter-icon.png" alt="Twitter" class="h-8 w-8">
+                </a>
+                <a href="#" class="text-sysmango-blue hover:opacity-80">
+                    <img src="/images/linkedin-icon.png" alt="LinkedIn" class="h-8 w-8">
+                </a>
+                <a href="#" class="text-sysmango-blue hover:opacity-80">
+                    <img src="/images/facebook-icon.png" alt="Facebook" class="h-8 w-8">
+                </a>
+                <a href="#" class="text-sysmango-blue hover:opacity-80">
+                    <img src="/images/flickr-icon.png" alt="Flickr" class="h-8 w-8">
+                </a>
             </div>
         </div>
     </section>
@@ -23,27 +50,6 @@
         </nav>
     </section>
 
-    <!-- Contact Form -->
-    <section class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-xl font-bold mb-4 text-sysmango-brown">Contact</h2>
-        <form id="contact-form" class="space-y-4">
-            <div>
-                <label for="name" class="block text-sm font-medium text-sysmango-text">Name</label>
-                <input type="text" id="name" name="name" class="mt-1 w-full rounded-md border-sysmango-gray">
-            </div>
-            <div>
-                <label for="email" class="block text-sm font-medium text-sysmango-text">Email</label>
-                <input type="email" id="email" name="email" class="mt-1 w-full rounded-md border-sysmango-gray">
-            </div>
-            <div>
-                <label for="message" class="block text-sm font-medium text-sysmango-text">Message</label>
-                <textarea id="message" name="message" rows="4" class="mt-1 w-full rounded-md border-sysmango-gray"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-sysmango-blue text-white py-2 px-4 rounded hover:bg-opacity-90 transition">
-                Send Message
-            </button>
-        </form>
-    </section>
 
     <!-- Social Links -->
     <section class="bg-white p-6 rounded-lg shadow-md">
