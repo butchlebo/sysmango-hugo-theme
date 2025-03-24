@@ -1,45 +1,53 @@
-<header class="bg-sysmango-brown relative">
-    <!-- Diamond pattern background -->
-    <div class="absolute inset-0 bg-repeat opacity-20" style="background-image: url('/images/diamond-bg.png');"></div>
-    
-    <div class="container mx-auto px-4 py-6 relative">
-        <!-- Gear graphics -->
-        <div class="absolute top-0 right-0 opacity-30">
-            <img src="/images/gear-pattern.png" alt="Decorative gears" class="h-24">
-        </div>
+<header>
+    <!-- Banner with brown background -->
+    <div class="bg-sysmango-brown relative">
+        <!-- Diamond pattern background -->
+        <div class="absolute inset-0 bg-repeat opacity-20" style="background-image: url('/images/diamond-bg.png');"></div>
         
-        <!-- Logo and site title -->
-        <div class="flex items-center justify-between">
-            <a href="/" class="text-white text-3xl font-bold hover:text-sysmango-gray transition">
-                SysMango.com
-            </a>
+        <div class="container mx-auto px-4 py-6 relative">
+            <!-- Gear graphics -->
+            <div class="absolute top-0 right-0 opacity-30">
+                <img src="/images/gear-pattern.png" alt="Decorative gears" class="h-24">
+            </div>
             
-            <!-- Navigation -->
-            <nav class="hidden md:block">
-                <ul class="flex space-x-6 text-white">
-                    <li><a href="/" class="hover:text-sysmango-gray transition">HOME</a></li>
-                    <li><a href="/about/" class="hover:text-sysmango-gray transition">ABOUT</a></li>
-                    <li><a href="/disclaimer/" class="hover:text-sysmango-gray transition">DISCLAIMER</a></li>
-                    <li><a href="/photos/" class="hover:text-sysmango-gray transition">PHOTOS</a></li>
+            <!-- Logo and site title -->
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-white text-3xl font-bold hover:text-sysmango-gray transition">
+                    SysMango.com
+                </a>
+                
+                <!-- Mobile menu button - only visible on mobile -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation menu below the banner - matches the image exactly -->
+    <div class="nav-container">
+        <div class="container mx-auto px-4">
+            <!-- Desktop navigation -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>HOME</a></li>
+                    <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>ABOUT</a></li>
+                    <li><a href="/disclaimer/" {{ if eq .RelPermalink "/disclaimer/" }}class="active"{{ end }}>DISCLAIMER</a></li>
+                    <li><a href="/photos/" {{ if eq .RelPermalink "/photos/" }}class="active"{{ end }}>PHOTOS</a></li>
                 </ul>
             </nav>
             
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-white" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- Mobile navigation - toggled by JavaScript -->
+            <nav class="mobile-nav hidden md:hidden py-2" id="mobile-menu">
+                <ul class="flex flex-col items-end">
+                    <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>HOME</a></li>
+                    <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>ABOUT</a></li>
+                    <li><a href="/disclaimer/" {{ if eq .RelPermalink "/disclaimer/" }}class="active"{{ end }}>DISCLAIMER</a></li>
+                    <li><a href="/photos/" {{ if eq .RelPermalink "/photos/" }}class="active"{{ end }}>PHOTOS</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Mobile navigation -->
-        <nav class="md:hidden hidden" id="mobile-menu">
-            <ul class="mt-4 space-y-2 text-white">
-                <li><a href="/" class="block hover:text-sysmango-gray transition">HOME</a></li>
-                <li><a href="/about/" class="block hover:text-sysmango-gray transition">ABOUT</a></li>
-                <li><a href="/disclaimer/" class="block hover:text-sysmango-gray transition">DISCLAIMER</a></li>
-                <li><a href="/photos/" class="block hover:text-sysmango-gray transition">PHOTOS</a></li>
-            </ul>
-        </nav>
     </div>
 </header>
