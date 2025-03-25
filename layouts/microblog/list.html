@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="space-y-8">
+    <header>
+        <h1 class="text-3xl font-bold text-sysmango-brown">{{ .Title }}</h1>
+        {{ with .Description }}
+        <div class="mt-2 text-lg text-gray-600">{{ . }}</div>
+        {{ end }}
+    </header>
+
+    <div class="space-y-8">
+        {{ range .Pages }}
+        <article class="card">
+            <div class="flex items-start">
+                <img src="/images/gear-80x80.jpg" alt="Gear Icon" class="w-10 h-10 mr-3 flex-shrink-0">
+                <div class="flex-grow">
+                    <div class="prose max-w-none">
+                        {{ .Content }}
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">{{ .Date.Format "January 2, 2006" }}</div>
+                </div>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}
