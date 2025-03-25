@@ -53,6 +53,17 @@
   padding: 0;
 }
 
+/* Read more link styles */
+.read-more-link {
+  color: #dc2626 !important; /* text-red-600 equivalent */
+  text-decoration: none;
+}
+
+/* Override any other styles that might affect the read-more links */
+a.read-more-link {
+  color: #dc2626 !important;
+}
+
 .mobile-nav li {
   list-style: none;
   margin: 2px 0;
