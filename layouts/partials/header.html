@@ -5,17 +5,21 @@
     <div class="flex justify-center">
         <div style="width: 50%; min-width: 960px; height: 5px;" class="bg-sysmango-brown"></div>
     </div>
-    <!-- Banner with Doc14.png background -->
-    <div class="w-full bg-white">
-        <div class="flex justify-center" style="height: 250px;">
-            <div class="relative w-full" style="max-width: 100%;">
-                <!-- Doc14.png as a single banner image -->
-                <img src="/Doc14.png" alt="Banner" class="w-full h-full object-cover object-center">
+    <!-- Banner with diamond pattern background -->
+    <div class="w-full" style="background-color: #8B7355;">
+        <div class="flex justify-center">
+            <div class="relative diamond-pattern" style="width: 50%; min-width: 960px; height: 90px;">
+                <!-- Gear graphics overlay -->
+                <div class="absolute inset-0 flex">
+                    <div class="h-full" style="width: 90px; background-image: url('/images/gear-80x80.jpg'); background-repeat: no-repeat; background-position: center;"></div>
+                    <div class="flex-grow"></div>
+                    <div class="h-full" style="width: 90px; background-image: url('/images/gear-80x80.jpg'); background-repeat: no-repeat; background-position: center;"></div>
+                </div>
                 
-                <div class="absolute inset-0">
-                    <div class="px-4 py-2">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="px-4">
                         <!-- Logo and site title -->
-                        <a href="/" class="text-white text-2xl font-bold hover:opacity-90 transition inline-block mt-2 ml-2">
+                        <a href="/" class="text-white text-3xl font-bold hover:opacity-90 transition inline-block ml-4">
                             SysMango.com
                         </a>
                     </div>
@@ -35,11 +39,11 @@
             <div style="width: 50%; min-width: 960px; background-color: #d5c8c0;" class="px-4">
                 <!-- Desktop navigation -->
                 <nav class="nav-menu">
-                    <ul>
-                        <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>HOME</a></li>
-                        <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>ABOUT</a></li>
-                        <li><a href="/disclaimer/" {{ if eq .RelPermalink "/disclaimer/" }}class="active"{{ end }}>DISCLAIMER</a></li>
-                        <li><a href="/photos/" {{ if eq .RelPermalink "/photos/" }}class="active"{{ end }}>PHOTOS</a></li>
+                    <ul class="flex space-x-8 py-2 text-sm font-medium">
+                        <li><a href="/" {{ if .IsHome }}class="active font-bold text-sysmango-brown"{{ else }}class="hover:text-sysmango-brown"{{ end }}>HOME</a></li>
+                        <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}class="active font-bold text-sysmango-brown"{{ else }}class="hover:text-sysmango-brown"{{ end }}>ABOUT</a></li>
+                        <li><a href="/disclaimer/" {{ if eq .RelPermalink "/disclaimer/" }}class="active font-bold text-sysmango-brown"{{ else }}class="hover:text-sysmango-brown"{{ end }}>DISCLAIMER</a></li>
+                        <li><a href="/photos/" {{ if eq .RelPermalink "/photos/" }}class="active font-bold text-sysmango-brown"{{ else }}class="hover:text-sysmango-brown"{{ end }}>PHOTOS</a></li>
                     </ul>
                 </nav>
                 
